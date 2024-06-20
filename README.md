@@ -112,7 +112,7 @@ Casual riders have a higher average ride time compared to members, especially on
 
 6. Average Ride Time by Month (in seconds)
 
-The average ride time of members is consistently less than 1000 seconds throughout the year. Meanwhile, the average ride time of casual riders is significantly higher, exceeding 1500 seconds, especially in the months of May, June, July, and August
+The average ride time of members is consistently less than 1000 seconds throughout the year. Meanwhile, the average ride time of casual riders is significantly higher, exceeding 1500 seconds, especially in May, June, July, and August
 
 ![Average ride time vs month](Output/Images/Average ride time vs month.png)
 
@@ -130,7 +130,7 @@ The chart shows distinct variations in the frequency of rides per hour for both 
 
 9. Frequency of Ride per hour by day of the week
 
-On weekdays, there is a notable increase in rides during the morning (7 am to 9 am) and another peak in the evening (4 pm to 6 pm). This pattern indicates that members use bikes for daily commuting to and from work, displaying consistent behavior throughout the weekdays. In contrast, weekends show a marked difference between members and casual riders. Casual riders demonstrate a substantial increase in bike usage on Saturdays and Sundays, indicating a preference for other activities.
+On weekdays, there is a notable increase in rides during the morning (7 am to 9 am) and another peak in the evening (4 pm to 6 pm). This pattern indicates that members use bikes for daily commuting to and from work, displaying consistent behaviour throughout the weekdays. In contrast, weekends show a marked difference between members and casual riders. Casual riders demonstrate a substantial increase in bike usage on Saturdays and Sundays, indicating a preference for other activities.
 
 ![Demand per hour by day of the week](Output/Images/Demand per hour by day of th week.png)
 
@@ -140,7 +140,7 @@ On weekdays, there is a notable increase in rides during the morning (7 am to 9 
 
 - Annual members hold the largest proportion of total rides, approximately 30% more than casual riders. They take more rides throughout the year with shorter ride times, and their ride frequency peaks during weekdays, most likely due to commuting for work, and declines slightly over weekends.
 - Casual riders have longer ride durations compared to members and are most active on weekends, likely using bikes for leisure activities.
-- Both riders peak during summer season (June, July, and August) and decline during winter season (Dec, Jan, and Feb).
+- Both riders peak during the summer season (June, July, and August) and decline during the winter season (Dec, Jan, and Feb).
 
 ### Recommendations
 
