@@ -84,55 +84,55 @@ The sharing phase presents the insights and findings derived from the analysis o
 
 According to the Casuals vs Members distribution chart, members accounted for the majority of the rides, representing 64.3%, while casual riders made up 35.7% of the dataset. Thus, members' ride share is approximately 30% higher than that of casual riders.
 
-![Total Rides Casuals vs Members](Output/Images/Total Rides-Casual vs Members.png)
+![Total Rides Casuals vs Members](Output/Images/Total-Rides-Casual-vs-Members.png)
 
 2. Number of Rides by Bike Type
 
 The analysis of bike types reveals that members mostly use classic bikes, followed by electric bikes. However, casual riders showed a preference for docked bikes, along with other types of bikes.
 
-![Rideable type vs Number of rides by Casual and member riders](Output/Images/Rideable type vs Number of rides.png)
+![Rideable type vs Number of rides by Casual and member riders](Output/Images/Rideable-type-vs-Number-of-rides.png)
 
 3. Number of Rides per Day
 
 The number of rides taken by members is consistently high throughout the week compared to casual riders. However, there is an increase in the number of rides taken by casual riders on the weekend.
 
-![Total rides vs day of week](Output/Images/Total rides vs day of week.png)
+![Total rides vs day of week](Output/Images/Total-rides-vs-day-of-week.png)
 
 4. Number of Rides per Month
 
 Analysis reveals that the number of rides taken by members is consistently high throughout the year compared to casual riders. The months of June, July, August, and September account for the highest number of rides for both members and casual riders, indicating a busy time of the year. However, there is a drop in rides during December, January, and February due to the winter season.
 
-![Total rides vs month](Output/Images/Total rides vs month.png)
+![Total rides vs month](Output/Images/Total-rides-vs-month.png)
 
 5. Average Ride Time by Day (in seconds)
 
 Casual riders have a higher average ride time compared to members, especially on weekends.
 
-![Average ride time vs Day of week](Output/Images/Average ride time vs day of week.png)
+![Average ride time vs Day of week](Output/Images/Average-ride-time-vs-day-of-week.png)
 
 6. Average Ride Time by Month (in seconds)
 
 The average ride time of members is consistently less than 1000 seconds throughout the year. Meanwhile, the average ride time of casual riders is significantly higher, exceeding 1500 seconds, especially in May, June, July, and August
 
-![Average ride time vs month](Output/Images/Average ride time vs month.png)
+![Average ride time vs month](Output/Images/Average-ride-time-vs-month.png)
 
 7. Average Ride Distance
 
 From the chart below, we can see that both types of riders travel about the same average distance. This similarity could be due to members taking rides with consistent ride times throughout the week, while casual riders take rides mostly on weekends with higher ride times.
 
-![Mean travel distance by riders](Output/Images/Mean travel distance by riders.png)
+![Mean travel distance by riders](Output/Images/Mean-travel-distance-by-riders.png)
 
 8. Frequency of Ride per hour in a day
 
 The chart shows distinct variations in the frequency of rides per hour for both members and casual riders. Both groups experience peak usage at 1700 hours (5 PM), with the highest number of rides occurring during that hour.
 
-![Demand by hour in a day](Output/Images/Demand by hour in a day.png)
+![Demand by hour in a day](Output/Images/Demand-by-hour-in-a-day.png)
 
 9. Frequency of Ride per hour by day of the week
 
 On weekdays, there is a notable increase in rides during the morning (7 am to 9 am) and another peak in the evening (4 pm to 6 pm). This pattern indicates that members use bikes for daily commuting to and from work, displaying consistent behaviour throughout the weekdays. In contrast, weekends show a marked difference between members and casual riders. Casual riders demonstrate a substantial increase in bike usage on Saturdays and Sundays, indicating a preference for other activities.
 
-![Demand per hour by day of the week](Output/Images/Demand per hour by day of th week.png)
+![Demand per hour by day of the week](Output/Images/Demand-per-hour-by-day-of-the-week.png)
 
 ## PHASE 6: Act
 
