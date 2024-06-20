@@ -19,8 +19,9 @@ The goal of this case study is to identify how annual members and casual riders 
 - Average Ride Distance
 - Frequency of Rides per Hour
 
-Primary stakeholders: The director of marketing and the Cyclistic executive team
-Secondary stakeholders: Cyclistic marketing analytics team
+Primary stakeholders: The director of marketing and the Cyclistic executive team.
+
+Secondary stakeholders: Cyclistic marketing analytics team.
 
 ## PHASE 2: Prepare
 
