@@ -6,11 +6,11 @@ Welcome to my capstone project for the Google Data Analytics Certificate course.
 
 You are a junior data analyst working on the marketing analyst team at Cyclistic, a bike-share company in Chicago. The director of marketing believes the company’s future success depends on maximizing the number of annual memberships. Therefore, your team wants to understand how casual riders and annual members use Cyclistic bikes differently. From these insights, your team will design a new marketing strategy to convert casual riders into annual members. But first, Cyclistic executives must approve your recommendations, so they must be backed up with compelling data insights and professional data visualizations.
 
-The project follows the six step data analysis process: ask, prepare, process, analyze, share, and act.
+The project follows the six-step data analysis process: ask, prepare, process, analyze, share, and act.
 
 ## PHASE 1: Ask
 
-The goal of this case study is to identify how do annual members and casual riders use Cyclistic bikes differently. To address this business task, the following questions will guide the analysis:
+The goal of this case study is to identify how annual members and casual riders use Cyclistic bikes differently. To address this business task, the following questions will guide the analysis:
 
 *Percentage of Annual Members vs Casual Riders
 *Number of Rides by Bike Type
@@ -19,16 +19,16 @@ The goal of this case study is to identify how do annual members and casual ride
 *Average Ride Distance
 *Frequency of Rides per Hour
 
-Primary stakeholders: The director of marketing and Cyclistic executive team
+Primary stakeholders: The director of marketing and the Cyclistic executive team
 Secondary stakeholders: Cyclistic marketing analytics team
 
 ## PHASE 2: Prepare
 
-The data used for this project is a public data and has been made available by Motivate International Inc. I will be using historical trip data from the last 12 months (June 2023 - May 2024).The dataset consists of 12 CSV files (each for a month) with 13 columns and more than 4 million rows.
+The data used for this project is a public data and has been made available by Motivate International Inc. I will be using historical trip data from the last 12 months (June 2023 - May 2024). The dataset consists of 12 CSV files (each for a month) with 13 columns and more than 4 million rows.
 
 ## PHASE 3: Process
 
-Before we start analyzing, it is necessary to make sure data is clean, free of error and in the right format. 
+Before we start analyzing, it is necessary to make sure the data is clean, free of error and in the right format. 
 
 1. I will be using R programming language and RStudio IDE for statistical analysis and visualization of data because of its ability to handle huge datasets efficiently. 
 ```r
@@ -37,11 +37,13 @@ library(tidyverse)
 library(ggplot2)
 library(dyplyr)
 library(geosphere)
+```
 
 2. Import individual monthly datasets and create data frames for each file. Check the column names and data structures for consistency across all files. Combine all data into one big data frame.
 ```r
 tripdata <- bind_rows(june23, july23, aug23, sept23, oct23, nov23,
                       dec23, jan24, feb24, mar24, apr24, may24)
+```
 
 3. Inspect new data frame that has been created. The following actions were performed after inspection:
 
@@ -56,15 +58,18 @@ tripdata <- tripdata %>%
   mutate(day_of_week = format(as.Date(started_at), "%A")) %>%
   mutate(ride_length = difftime(ended_at, started_at)) %>%
   mutate(start_time = strftime(started_at, "%H"))
+```
 *Converted ride length from factor to numeric
 *Added ride distance in km
 ```r
 tripdata$ride_distance <- distGeo(matrix(c(tripdata$start_lng, tripdata$start_lat), ncol = 2), 
                                   matrix(c(tripdata$end_lng, tripdata$end_lat), ncol = 2))
 tripdata$ride_distance <- tripdata$ride_distance/1000 #distance in km
-*The data frame includes a few hundred entries when bikes were taken out of docks and checked for quality where ride_length was negative or 'zero'. These rides were deleted and new version of data frame is created
+```
+*The data frame includes a few hundred entries when bikes were taken out of docks and checked for quality where ride_length was negative or 'zero'. These rides were deleted and a new version of the data frame was created
 ```r
 tripdata_clean <- tripdata[!(tripdata$start_station_name == "HQ QR"|tripdata$ride_length <= 0),]
+```
 
 ## PHASE 4: Data Analysis and Visualization
 
@@ -72,7 +77,7 @@ Click [here](https://github.com/vaishnavipaithane/Cyclistic-bike-share-analysis-
 
 ## PHASE 5: Share
 
-The share phase presents the insights and findings derived from the analysis of Cyclistic Bike Share data. The analysis revealed several key findings:
+The sharing phase presents the insights and findings derived from the analysis of Cyclistic Bike Share data. The analysis revealed several key findings:
 
 1. Percentage of  Casual Riders vs Annual Members 
 
