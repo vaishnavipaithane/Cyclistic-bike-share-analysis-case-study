@@ -8,7 +8,7 @@ You are a junior data analyst working on the marketing analyst team at Cyclistic
 
 The project follows the six-step data analysis process: ask, prepare, process, analyze, share, and act.
 
-## PHASE 1: Ask
+## 1: Ask
 
 The goal of this case study is to identify how annual members and casual riders use Cyclistic bikes differently. To address this business task, the following questions will guide the analysis:
 
@@ -23,11 +23,11 @@ Primary stakeholders: The director of marketing and the Cyclistic executive team
 
 Secondary stakeholders: Cyclistic marketing analytics team.
 
-## PHASE 2: Prepare
+## 2: Prepare
 
 The data used for this project is a public data and has been made available by Motivate International Inc. I will be using historical trip data from the last 12 months (June 2023 - May 2024). The dataset consists of 12 CSV files (each for a month) with 13 columns and more than 4 million rows.
 
-## PHASE 3: Process
+## 3: Process
 
 Before we start analyzing, it is necessary to make sure the data is clean, free of error and in the right format. 
 
@@ -72,11 +72,11 @@ tripdata$ride_distance <- tripdata$ride_distance/1000 #distance in km
 tripdata_clean <- tripdata[!(tripdata$start_station_name == "HQ QR"|tripdata$ride_length <= 0),]
 ```
 
-## PHASE 4: Data Analysis and Visualization
+## 4: Data Analysis and Visualization
 
 Click [here](https://github.com/vaishnavipaithane/Cyclistic-bike-share-analysis-case-study/blob/main/Scripts/Cyclistic%20bike-share%20analysis%20script.R) to view the R script and the summary of the complete analysis process.
 
-## PHASE 5: Share
+## 5: Share
 
 The sharing phase presents the insights and findings derived from the analysis of Cyclistic Bike Share data. The analysis revealed several key findings:
 
@@ -134,7 +134,7 @@ On weekdays, there is a notable increase in rides during the morning (7 am to 9 
 
 ![Demand per hour by day of the week](Output/Images/Demand-per-hour-by-day-of-the-week.png)
 
-## PHASE 6: Act
+## 6: Act
 
 ### Key takeaways
 
