@@ -12,12 +12,12 @@ The project follows the six-step data analysis process: ask, prepare, process, a
 
 The goal of this case study is to identify how annual members and casual riders use Cyclistic bikes differently. To address this business task, the following questions will guide the analysis:
 
-*Percentage of Annual Members vs Casual Riders
-*Number of Rides by Bike Type
-*Number of Rides per Day and per Month
-*Average Ride Time (in seconds) by day and month
-*Average Ride Distance
-*Frequency of Rides per Hour
+- Percentage of Annual Members vs Casual Riders
+- Number of Rides by Bike Type
+- Number of Rides per Day and per Month
+- Average Ride Time (in seconds) by day and month
+- Average Ride Distance
+- Frequency of Rides per Hour
 
 Primary stakeholders: The director of marketing and the Cyclistic executive team
 Secondary stakeholders: Cyclistic marketing analytics team
@@ -47,9 +47,9 @@ tripdata <- bind_rows(june23, july23, aug23, sept23, oct23, nov23,
 
 3. Inspect new data frame that has been created. The following actions were performed after inspection:
 
-*Converted 'started_at' and 'ended_at' columns to POSIXct format
-*Added 'ride_length' column and calculated the length of each ride
-*Added new columns of data - date, month, year, day of week
+- Converted 'started_at' and 'ended_at' columns to POSIXct format
+- Added 'ride_length' column and calculated the length of each ride
+- Added new columns of data - date, month, year, day of week
 ```r
 tripdata <- tripdata %>%
   mutate(year = format(as.Date(started_at), "%Y")) %>% 
@@ -59,14 +59,14 @@ tripdata <- tripdata %>%
   mutate(ride_length = difftime(ended_at, started_at)) %>%
   mutate(start_time = strftime(started_at, "%H"))
 ```
-*Converted ride length from factor to numeric
-*Added ride distance in km
+- Converted ride length from factor to numeric
+- Added ride distance in km
 ```r
 tripdata$ride_distance <- distGeo(matrix(c(tripdata$start_lng, tripdata$start_lat), ncol = 2), 
                                   matrix(c(tripdata$end_lng, tripdata$end_lat), ncol = 2))
 tripdata$ride_distance <- tripdata$ride_distance/1000 #distance in km
 ```
-*The data frame includes a few hundred entries when bikes were taken out of docks and checked for quality where ride_length was negative or 'zero'. These rides were deleted and a new version of the data frame was created
+- The data frame includes a few hundred entries when bikes were taken out of docks and checked for quality where ride_length was negative or 'zero'. These rides were deleted and a new version of the data frame was created
 ```r
 tripdata_clean <- tripdata[!(tripdata$start_station_name == "HQ QR"|tripdata$ride_length <= 0),]
 ```
@@ -137,18 +137,17 @@ On weekdays, there is a notable increase in rides during the morning (7 am to 9 
 
 ### Key takeaways
 
-*Annual members hold the largest proportion of total rides, approximately 30% more than casual riders. They take more rides throughout the year with shorter ride times, and their ride frequency peaks during weekdays, most likely due to commuting for work, and declines slightly over weekends.
-*Casual riders have longer ride durations compared to members and are most active on weekends, likely using bikes for leisure activities.
-*Both riders peak during summer season (June, July, and August) and decline during winter season (Dec, Jan, and Feb).
+- Annual members hold the largest proportion of total rides, approximately 30% more than casual riders. They take more rides throughout the year with shorter ride times, and their ride frequency peaks during weekdays, most likely due to commuting for work, and declines slightly over weekends.
+- Casual riders have longer ride durations compared to members and are most active on weekends, likely using bikes for leisure activities.
+- Both riders peak during summer season (June, July, and August) and decline during winter season (Dec, Jan, and Feb).
 
 ### Recommendations
 
-*Provide special discounts to casual riders when they opt for an annual membership, emphasizing the advantages and cost-effectiveness of long-term commitment.
-*Provide discounts on family plans when converting to annual membership.
-*Provide referral discounts to both annual members and casual riders for recruiting friends or family.
-*Establish partnerships with high schools and universities to provide incentives for students.
-*Promote the ease of use, affordability, accessibility, eco-friendly options, and common uses of bike rides.
-
+- Provide special discounts to casual riders when they opt for an annual membership, emphasizing the advantages and cost-effectiveness of long-term commitment.
+- Provide discounts on family plans when converting to annual membership.
+- Provide referral discounts to both annual members and casual riders for recruiting friends or family.
+- Establish partnerships with high schools and universities to provide incentives for students.
+- Promote the ease of use, affordability, accessibility, eco-friendly options, and common uses of bike rides.
 
 
 
